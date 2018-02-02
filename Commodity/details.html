@@ -20,8 +20,8 @@
 					$(this).removeClass('mui-active');
 				});
 				
-				$('.goods-details a').click(function() {
-					$('.goods-details a').removeClass('goods-active');
+				$('.goods-details span').click(function() {
+					$('.goods-details span').removeClass('goods-active');
 					$(this).addClass('goods-active'); 
 				});
 			});
@@ -67,7 +67,7 @@
 		<div class="mui-content">
 		    <div class="goods-details">
 		    	<a>
-		    		<span style="color: #ff0000;">商品介绍</span>
+		    		<span class="goods-active">商品介绍</span>
 		    	</a>
 		    	<span>|</span>
 		    	<a>
