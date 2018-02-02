@@ -6,17 +6,219 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<script src="js/rem.js"></script>
-		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_560166_kqglatu2j763whfr.css"/>
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_560166_vlvueml1q1zia4i.css"/>
 		<link href="css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="css/goods.css"/>
 		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js" ></script>
 		<script type="text/javascript">
 			mui.init()
+		</script>
+		<script>
+			$(function() {
+				$('.vart').click(function() {	
+					$(this).removeClass('mui-active');
+				});
+				
+				$('.goods-details span').click(function() {
+					$('.goods-details span').removeClass('goods-active');
+					$(this).addClass('goods-active'); 
+				});
+			});
 		</script>
 	</head>
 
 	<body>
-		
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left topIcon"></a>
+		    <div class="nav-detail">
+		    	 <div class="mui-slider">
+			        <div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+			            <a class="mui-control-item" href="#item1">商品</a>
+			            <a class="mui-control-item" href="#item2">详情</a>
+			            <a class="mui-control-item" href="#item2">评价</a>
+			        </div>
+			        <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+		    	</div>
+		    </div>
+		    <a><i class="iconfont icon-fenxiang topIcon"></i></a>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-active">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <i class="mui-icon iconfont icon-kefu"></i>
+		        <span class="mui-tab-label">客服</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <i class="mui-icon iconfont icon-shoucang"></i>
+		        <span class="mui-tab-label">收藏</span>
+		    </a>
+		    <a class="mui-tab-item vart vart-cart">
+		        <span class="mui-tab-label">加入购物车</span>
+		    </a>
+		    <a class="mui-tab-item vart vart-buy">   
+		        <span class="mui-tab-label">立即购买</span>
+		    </a>
+		</nav>
+		<div class="mui-content">
+		    <div id="slider" class="mui-slider" >
+		      <div class="mui-slider-group mui-slider-loop">
+		        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		        <div class="mui-slider-item mui-slider-item-duplicate">
+		          <a href="#">
+		            <img src="http://placehold.it/400x300">
+		          </a>
+		        </div>
+		        <!-- 第一张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="img/icon313.png">
+		          </a>
+		        </div>
+		        <!-- 第二张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="http://placehold.it/400x300">
+		          </a>
+		        </div>
+		        <!-- 第三张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="http://placehold.it/400x300">
+		          </a>
+		        </div>
+		        <!-- 第四张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="http://placehold.it/400x300">
+		          </a>
+		        </div>
+		        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		        <div class="mui-slider-item mui-slider-item-duplicate">
+		          <a href="#">
+		            <img src="http://placehold.it/400x300">
+		          </a>
+		        </div>
+		      </div>
+		      <div class="mui-slider-indicator">
+		        <div class="mui-indicator mui-active"></div>
+		        <div class="mui-indicator"></div>
+		        <div class="mui-indicator"></div>
+		        <div class="mui-indicator"></div>
+		      </div>
+		    </div>
+		    
+		    <div class="goods-content">
+		    	<div class="goods-content-title">
+		    		<span>OF7S10P1M1B10E贺德克滤油机</span>
+		    		<div style="color: #FF0000;">
+		    			<i class="iconfont icon-tongzhi"></i>
+		    			<span>降价通知</span>
+		    		</div>
+		    	</div>
+		    	<div class="goods-content-title">
+		    		<div>
+		    			<span>￥</span>
+		    			<span style="font-size: 0.42rem; color: #FF0000;">3000.00</span>
+		    		</div>
+		    		<span style="color: #999999;">销量<span>128</span>笔</span>
+		    	</div>
+		    	<div style="color: #999999; padding: 5px 0; border-bottom: 1px solid #d9d9d9;">
+		    		<span>原价</span>
+		    		<span style="text-decoration:line-through">￥4760</span>
+		    	</div>
+		    	<div class="goods-content-other"> 
+		    		<span>折扣：<span>8.4</span>折</span>
+		    		<span><span>0</span>人评价</span>
+		    		<span><span>0</span>人已购</span>
+		    	</div>
+		    	<div class="goods-content-other">
+		    		<span>会员等级价格</span>
+		    		<i class="iconfont icon-youjiantou1"></i>
+		    	</div>
+		    	<div class="goods-content-other">
+		    		<span>产品参数</span>
+		    		<i class="iconfont icon-youjiantou1"></i>
+		    	</div>
+		    	<div style="padding: 8px 0; border-bottom: 1px solid #d9d9d9; font-size: 0.28rem;">
+		    		<span style="color: #999999;">送至</span>
+		    		<i style="color: #FF0000;" class="iconfont icon-diliweizhi"></i>
+		    		<span>河南省郑州市二七区大学路康桥华城9号楼</span>
+		    	</div>
+		    	
+		    	<div style="padding: 10px; text-align: center; color: #FF0000;">为你推荐</div>
+		    	<ul class="mui-table-view mui-grid-view">
+		    	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		    	        <a href="#">
+		    	            <img class="mui-media-object" src="img/icon28.png">
+			                <div class="mui-media-body">幸福就是可以一起睡觉</div>
+			                 <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+	                        	<span style="color: #FF0000;">￥ 666</span>
+	                        	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+	                         </div>
+		    	        </a>
+		    	    </li>
+		    	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		    	        <a href="#">
+		    	            <img class="mui-media-object" src="img/icon28.png">
+			                <div class="mui-media-body">幸福就是可以一起睡觉</div>
+			                 <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+	                        	<span style="color: #FF0000;">￥ 666</span>
+	                        	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+	                        </div>
+		    	        </a>
+		    	    </li>
+		    	     <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		    	        <a href="#">
+		    	            <img class="mui-media-object" src="img/icon28.png">
+			                <div class="mui-media-body">幸福就是可以一起睡觉</div>
+			                <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+	                        	<span style="color: #FF0000;">￥ 666</span>
+	                        	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+	                        </div>
+		    	        </a>
+		    	    </li>
+		    	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		    	        <a href="#">
+		    	            <img class="mui-media-object" src="img/icon28.png">
+			                <div class="mui-media-body">幸福就是可以一起睡觉</div>
+			                 <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+	                        	<span style="color: #FF0000;">￥ 666</span>
+	                        	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+	                         </div>
+		    	        </a>
+		    	    </li>
+		    	    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		    	        <a href="#">
+		    	            <img class="mui-media-object" src="img/icon28.png">
+			                <div class="mui-media-body">幸福就是可以一起睡觉</div>
+			                 <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+	                        	<span style="color: #FF0000;">￥ 666</span>
+	                        	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+	                        </div>
+		    	        </a>
+		    	    </li>
+		    	     <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		    	        <a href="#">
+		    	            <img class="mui-media-object" src="img/icon28.png">
+			                <div class="mui-media-body">幸福就是可以一起睡觉</div>
+			                <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+	                        	<span style="color: #FF0000;">￥ 666</span>
+	                        	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+	                        </div>
+		    	        </a>
+		    	    </li>
+		    	</ul>
+		    	<div style="padding: 10px; text-align: center;">更多为你推荐</div>
+		    	<div style="padding: 10px; text-align: center;">
+		    		<i class="iconfont icon-xiangshangjiantou"></i>
+		    		<span>上拉查看图文详情</span>
+		    	</div>
+		    </div>
+		</div>
 	</body>
 
 </html>
