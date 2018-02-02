@@ -1,0 +1,42 @@
+.headline {
+	display: flex;
+	padding: 5px 0;
+	align-items: center;	
+}
+
+.mui-bar-nav {
+	display: flex;
+	height: 60px;
+	background: #0c5bb4;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.mui-search {
+	width: 200px;
+	margin: 0;
+	padding: 0;	
+	background: white;
+	border-radius: 20px;
+}
+
+.mui-input-clear {
+	background: transparent !important;
+}
+
+.promotion_title{
+	padding: 10px 0;
+	text-align: center;
+}
+
+.promotion_item img{
+	width: 3.48rem !important;
+}
+
+.ligrig li img{
+	width: 1.08rem !important;
+}
+
+.limitTime img {
+   width: 2.31rem !important;
+}

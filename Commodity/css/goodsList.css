@@ -1,0 +1,79 @@
+
+.mui-bar-nav {
+	display: flex;
+	/*height: 1rem;*/
+	background: #0c5bb4;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.topIcon{
+	color: #FFFFFF;
+	font-size: 0.4rem;
+}
+
+.mui-search {
+	width: 5.84rem !important;
+	background: white;
+	border-radius: 20px;
+}
+
+.mui-input-clear {
+	
+	background: transparent !important;
+}
+
+.goodslist img {
+	width: 2.2rem !important;
+}
+
+/*覆盖原有样式*/
+.mui-table-view .mui-media-object {  
+    max-width: none !important; 
+    height: auto !important; 
+}
+
+.machine_title {
+	font-size: 0.28rem;
+	font-family: "微软雅黑";
+}
+
+.machine_brand {
+	font-size: 0.24rem;
+	color: #999999;
+}
+
+.machine_num {
+	font-size: 0.24rem;
+	color: #999999;	
+}
+
+.machine_price {
+	color: #ff0000;
+	display: flex;
+	justify-content: space-between;
+}
+
+.gouwuche {
+	width: 0.37rem; 
+	height: 0.37rem; 
+	background: #FF0000; 
+	border-radius: 5px;
+	text-align: center;
+	line-height: 0.37rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+

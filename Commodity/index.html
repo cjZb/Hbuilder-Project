@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_560166_cvi0vn1xabofajor.css"/>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/commodity.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.ready(function() {
+			var slider = document.getElementById('Gallery');
+			var group = slider.querySelector('.mui-slider-group');
+			var items = mui('.mui-slider-item', group);
+			//克隆第一个节点
+			var first = items[0].cloneNode(true);
+			first.classList.add('mui-slider-item-duplicate');
+			//克隆最后一个节点
+			var last = items[items.length - 1].cloneNode(true);
+			last.classList.add('mui-slider-item-duplicate');
+			//处理是否循环逻辑，若支持循环，需支持两点：
+			//1、在.mui-slider-group节点上增加.mui-slider-loop类
+			//2、重复增加2个循环节点，图片顺序变为：N、1、2...N、1
+			var sliderApi = mui(slider).slider();
+
+			function toggleLoop(loop) {
+					if (loop) {
+						group.classList.add('mui-slider-loop');
+						group.insertBefore(last, group.firstChild);
+						group.appendChild(first);
+						sliderApi.refresh();
+						sliderApi.gotoItem(0);
+					} else {
+						group.classList.remove('mui-slider-loop');
+						group.removeChild(first);
+						group.removeChild(last);
+						sliderApi.refresh();
+						sliderApi.gotoItem(0);
+					}
+				}
+			});
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a>
+			<i class="iconfont icon-fenlei" style="font-size: 30px; color: white;" ></i>
+		</a>
+		<div class="mui-input-row mui-search">
+		    <input type="search" class="mui-input-clear" placeholder="搜索商品名称">
+		</div>
+		<a>
+			<i class="iconfont icon-xiaoxi" style="font-size: 30px; color: white;" ></i>
+		</a>
+	</header>
+	<nav class="mui-bar mui-bar-tab">
+	    <a class="mui-tab-item mui-active">
+	        <span class="mui-icon mui-icon-home"></span>
+	        <span class="mui-tab-label">首页</span>
+	    </a>
+	    <a class="mui-tab-item">
+	        <span class="mui-icon mui-icon-phone"></span>
+	        <span class="mui-tab-label">电话</span>
+	    </a>
+	    <a class="mui-tab-item">
+	        <span class="mui-icon mui-icon-email"></span>
+	        <span class="mui-tab-label">邮件</span>
+	    </a>
+	    <a class="mui-tab-item">
+	        <span class="mui-icon mui-icon-gear"></span>
+	        <span class="mui-tab-label">设置</span>
+	    </a>
+	</nav>
+	<div class="mui-content">
+		<div id="slider" class="mui-slider" >
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="./img/slider.png" />
+					</a>
+				</div>
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="./img/slider.png" />
+					</a>
+				</div>
+				<!-- 第二张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="../images/muwu.jpg">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="../images/cbd.jpg">
+					</a>
+				</div>
+				<!-- 第四张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="../images/yuantiao.jpg">
+					</a>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="../images/shuijiao.jpg">
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div> 
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+	    <!--九宫格-->
+	    <div id="Gallery" class="mui-slider" style="margin-top:15px;">
+				<div class="mui-slider-group">
+					<div class="mui-slider-item ligrig">
+						<ul class="mui-table-view mui-grid-view mui-grid-12">
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<img src="img/icon10.png"/>
+									<div class="mui-media-body">过滤检测设备</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<img src="img/icon152.png"/>
+									<div class="mui-media-body">产品加工机械</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<img src="img/icon11.png"/>
+									<div class="mui-media-body">过滤材料</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<img src="img/icon13.png"/>
+									<div class="mui-media-body">污水处理设备</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<img src="img/icon12.png"/>
+									<div class="mui-media-body">空气除尘设备</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<img src="img/icon14.png"/>
+									<div class="mui-media-body">滤油机</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<img src="img/icon16.png"/>
+									<div class="mui-media-body">液压过滤器</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+								<a href="#">
+									<img src="img/icon17.png"/>
+									<div class="mui-media-body">滤芯</div>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+					<div class="mui-slider-item ligrig">
+						<ul class="mui-table-view mui-grid-view mui-grid-12">
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+								<a href="#">
+									<img src="img/icon10.png"/>
+									<div class="mui-media-body">过滤检测设备</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+								<a href="#">
+									<img src="img/icon152.png"/>
+									<div class="mui-media-body">产品加工机械</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+								<a href="#">
+									<img src="img/icon11.png"/>
+									<div class="mui-media-body">过滤材料</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+								<a href="#">
+									<img src="img/icon13.png"/>
+									<div class="mui-media-body">污水处理设备</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+								<a href="#">
+									<img src="img/icon12.png"/>
+									<div class="mui-media-body">空气除尘设备</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+								<a href="#">
+									<img src="img/icon14.png"/>
+									<div class="mui-media-body">滤油机</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+								<a href="#">
+									<img src="img/icon16.png"/>
+									<div class="mui-media-body">液压过滤器</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
+								<a href="#">
+									<img src="img/icon17.png"/>
+									<div class="mui-media-body">滤芯</div>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--头条广告-->
+			<div style="padding: 0 10px;">
+				<div class="headline">
+					<img src="img/icon2.png" style="width: 50px; margin-right: 10px;" />
+					<span style="font-size: 15px;">上海总经理莅临我司法参与。。。</span>
+					<span style="margin: 0 10px 0 20px; color: #ccc;">|</span>
+					<span>更多</span>
+				</div>
+				<div class="headline" style="display: flex; justify-content: space-between;">
+					<div style="display: flex; align-items: center;">
+						<img src="img/icon3.png"  style="margin-right: 10px; width: 3px; height: 20px;"/>
+						<span style="margin-right: 200px;">超级品牌日</span>		
+					</div>
+					<img src="img/icon5.png" style="width: 25px; height: 25px;" />		
+				</div>
+				<div>
+					<img src="img/icon18.png" style="width: 100%; height: 50px;" />
+					<img src="img/icon18.png" style="width: 100%; height: 50px;" />
+				</div>
+			</div>
+			
+			<div class="headline" style="margin-top: 20px; margin-bottom: 10px;">
+				<img src="img/icon6.png" style="width: 100%;" />	
+			</div>
+			
+			<div style="padding: 0 10px;">
+				<div class="headline" style="justify-content: space-between;">
+					<img src="img/icon5.png" style="visibility:hidden; width: 25px; height: 25px;" />
+					<img src="img/icon19.png" style="width: 120px; height: 20px;" />
+					<img src="img/icon5.png" style="width: 25px; height: 25px;" />
+				</div>
+				<div class="mui-slider limitTime">
+			        <div class="mui-slider-group mui-slider-loop">
+			        	<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一个图文表格) -->
+			            <div class="mui-slider-item mui-slider-item-duplicate">
+			                <ul class="mui-table-view mui-grid-view">
+			                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../images/cbd.jpg">
+			                            <div class="mui-media-body">Color of SIP CBD</div></a></li>
+			                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../images/yuantiao.jpg">
+			                            <div class="mui-media-body">静静看这世界</div></a></li>
+			                </ul>
+			            </div>
+			            <div class="mui-slider-item">
+			                <ul class="mui-table-view mui-grid-view">
+			                    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+			                    	<a href="#">
+			                    		<div style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center;">
+			                    			<img class="mui-media-object " src="img/icon21.png">
+			                    			<div style="width: 100%; background: #ccc;">20:00:00</div>
+			                    		</div>
+			                            <div class="mui-media-body">幸福就是可以一起睡觉</div>
+			                            <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+			                            	<span style="color: #FF0000;">￥ 666</span>
+			                            	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+			                            </div></a></li>
+			                    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+			                    	<a href="#">
+			                    		<div style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center;">
+			                    			<img class="mui-media-object" src="img/icon25.png">
+			                    			<div style="width: 100%; background: #ccc;">20:00:00</div>
+			                    		</div>
+			                    		
+			                            <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div>
+			                    		<div style="display: flex; justify-content: space-between; margin-top: 5px;">
+			                            	<span style="color: #FF0000;">￥ 666</span>
+			                            	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+			                            </div></a></li>
+			           
+			                    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+			                    	<a href="#">
+			                    		<div style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center;">
+			                    			<img class="mui-media-object" src="img/icon26.png">
+			                    			<div style="width: 100%; background: #ccc;">20:00:00</div>
+			                    		</div>
+			                    		
+			                            <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div>
+			                            <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+			                            	<span style="color: #FF0000;">￥ 666</span>
+			                            	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+			                            </div></a></li>
+			                </ul>
+			            </div>
+			            <div class="mui-slider-item">
+			                <ul class="mui-table-view mui-grid-view">
+			                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../images/cbd.jpg">
+			                            <div class="mui-media-body">Color of SIP CBD</div></a></li>
+			                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../images/yuantiao.jpg">
+			                            <div class="mui-media-body">静静看这世界</div></a></li>
+			                </ul>
+			            </div>
+			            
+			            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一个图文表格) -->
+			            <div class="mui-slider-item mui-slider-item-duplicate">
+			                <ul class="mui-table-view mui-grid-view">
+			                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../images/shuijiao.jpg">
+			                            <div class="mui-media-body">幸福就是可以一起睡觉</div></a></li>
+			                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../images/muwu.jpg">
+			                            <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+			                </ul>
+			            </div>
+			        </div>
+			        <div class="mui-slider-indicator" style="position: static;background-color: #fff;">
+			            <span class="mui-action mui-action-previous mui-icon mui-icon-back"></span>
+			            <div class="mui-number">
+			                <span>1</span> / 2
+			            </div>
+			            <span class="mui-action mui-action-next mui-icon mui-icon-forward"></span>
+			        </div>
+			    </div>
+			</div>	
+			
+			
+		    
+		    <div class="promotion_title">
+		    	<img src="img/icon31.png" style="width: 2.6rem;"/>	
+		    </div>
+		    
+		    <div>
+		    	 <ul class="mui-table-view mui-grid-view promotion_item">
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="img/icon28.png">
+		                <div class="mui-media-body">幸福就是可以一起睡觉</div>
+		                 <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                        	<span style="color: #FF0000;">￥ 666</span>
+                        	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+                         </div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="img/icon29.png">
+		                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div>
+		                <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                        	<span style="color: #FF0000;">￥ 666</span>
+                        	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+                         </div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#"><img class="mui-media-object" src="img/icon28.png">
+		                <div class="mui-media-body">Color of SIP CBD</div>
+		                <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                        	<span style="color: #FF0000;">￥ 666</span>
+                        	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+                         </div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="img/icon29.png">
+		                <div class="mui-media-body">静静看这世界</div>
+						 <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                        	<span style="color: #FF0000;">￥ 666</span>
+                        	<div style="width: 0.38rem; line-height: 0.38rem; border-radius: 0.05rem; background: #FF0000;"><i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.12rem;"></i></div>
+                         </div></a></li>								                
+		    </ul>    
+		    </div>
+	</div>
+</body>
+</html>

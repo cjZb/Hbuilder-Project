@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/rem.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_560166_kqglatu2j763whfr.css"/>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/details.css" />
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			mui.init();	
+		</script>
+		<script>
+			$(function() {
+				$('.vart').click(function() {	
+					$(this).removeClass('mui-active');
+				});
+				
+				$('.goods-details a').click(function() {
+					$('.goods-details a').removeClass('goods-active');
+					$(this).addClass('goods-active'); 
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left topIcon"></a>
+		    <div class="nav-detail">
+		    	 <div class="mui-slider">
+			        <div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+			            <a class="mui-control-item" href="#item1">商品</a>
+			            <a class="mui-control-item" href="#item2">详情</a>
+			            <a class="mui-control-item" href="#item2">评价</a>
+			        </div>
+			        <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+		    	</div>
+		    </div>
+		    <a><i class="iconfont icon-fenxiang topIcon"></i></a>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-active">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <i class="mui-icon iconfont icon-kefu"></i>
+		        <span class="mui-tab-label">客服</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <i class="mui-icon iconfont icon-shoucang"></i>
+		        <span class="mui-tab-label">收藏</span>
+		    </a>
+		    <a class="mui-tab-item vart vart-cart">
+		        <span class="mui-tab-label">加入购物车</span>
+		    </a>
+		    <a class="mui-tab-item vart vart-buy">   
+		        <span class="mui-tab-label">立即购买</span>
+		    </a>
+		</nav>
+		
+		<div class="mui-content">
+		    <div class="goods-details">
+		    	<a>
+		    		<span style="color: #ff0000;">商品介绍</span>
+		    	</a>
+		    	<span>|</span>
+		    	<a>
+		    		<span>规格参数</span>
+		    	</a>
+		    	<span>|</span>
+		    	<a>
+		    		<span>包装售后</span>
+		    	</a>
+		    </div>
+		    <div>
+		    	<div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+		    		<div class="line"></div>
+		    		<span style="color: #666666;">商品信息</span>
+		    		<div class="line"></div>
+		    	</div>
+		    	<div>
+		    		<img src="img/icon214.png"  style="width: 100%;"/>
+		    	</div>
+		    </div>
+		</div>
+	</body>
+
+</html>

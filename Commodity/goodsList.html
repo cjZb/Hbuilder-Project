@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/rem.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_560166_xyiaxmbik4deu3di.css"/>
+		<link href="css/goodsList.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" /> 
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<script type="text/javascript" src="js/jquery.js"></script> 
+		<script type="text/javascript">
+			$(function(){ 
+				$('.retrie dt a').click(function(){
+					var $t=$(this);
+					if($t.hasClass('up')){
+						$(".retrie dt a").removeClass('up');
+						$('.downlist').hide();
+						$('.mask').hide();
+					}else{
+						$(".retrie dt a").removeClass('up');
+						$('.downlist').hide();
+						$t.addClass('up');
+						$('.downlist').eq($(".retrie dt a").index($(this)[0])).show();
+						$('.mask').show();
+					}
+				});
+				/*$(".mostnew ul li a:contains('"+$('#mostnew').text()+"')").addClass('selected');
+				$(".xiaoll ul li a:contains('"+$('#xiaol').text()+"')").addClass('selected');*/
+			});
+		</script> 
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left topIcon"></a>
+		    <div class="mui-input-row mui-search">
+		        <input type="search" class="mui-input-clear" placeholder="搜索商品名称">
+		    </div>
+		    <a><i class="iconfont icon-fenxiang topIcon"></i></a>
+		</header>
+		<div class="mui-content">
+		    <div>
+		    	<section class="job-module"> 
+					<dl class="retrie"> 
+						<dt>
+							<a id="mostnew" href="javascript:;">最新 </a>
+							<a id="xiaol" href="javascript:;">销量</a>
+							<a id="update" href="javascript:;">更新</a>
+							<a id="jiag" href="javascript:;">价格</a>
+							<a id="more" href="javascript:;"><i class="iconfont icon-gengduo-2"></i></a>
+							
+						</dt> 
+						<dd class="mostnew"> 
+							<ul class="slide downlist"> 
+								<li><a href="#">最新1</a></li> 
+								<li><a href="#">最新2</a></li> 
+							</ul> 
+						</dd> 
+						<dd class="xiaol"> 
+							<ul class="slide downlist"> 
+								<li><a href="#">销量1</a></li> 
+								<li><a href="#">销量2</a></li> 
+							</ul> 
+						</dd> 
+						<dd class="update"> 
+							<ul class="slide downlist"> 
+								<li><a href="#">更新1</a></li> 
+								<li><a href="#">更新2</a></li> 
+							</ul> 
+						</dd> 
+						<dd class="jiag"> 
+							<ul class="slide downlist"> 
+								<li><a href="#">价格1</a></li> 
+								<li><a href="#">价格2</a></li> 
+							</ul> 
+						</dd> 
+						<dd class="more"> 
+							<ul class="slide downlist"> 
+								<li><a href="#">更多1</a></li> 
+								<li><a href="#">更多2</a></li> 
+							</ul> 
+						</dd> 
+					</dl> 
+				</section> 
+		    </div>
+		    
+		    <div>
+		    	<ul class="mui-table-view goodslist" >
+		    	    <li class="mui-table-view-cell mui-media">
+		    	        <a href="javascript:;">
+		    	            <img class="mui-media-object mui-pull-left" src="img/icon213.png">
+		    	            <div class="mui-media-body">
+		    	               <div class="machine_title">LYC-32G 高固含量油滤油机</div>
+		    	               <div class="mui-ellipsis machine_brand">
+		    	               		品牌：<span style="margin-right: 5px;">利菲尔特</span> 型号： <span>LY-32G</span>
+		    	               </div>
+		    	               <div class="machine_num">
+		    	               		库存： <span>200</span>件
+		    	               </div>
+		    	               <div class="machine_price">
+		    	               		<div>
+		    	               			<span>￥</span>
+		    	               			<span>425.00</span>
+		    	               		</div>		    	          
+		    	               		<div class="gouwuche">
+		    	               			<i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.2rem;"></i>
+		    	               		</div>
+		    	               </div>
+		    	            </div>
+		    	        </a>
+		    	    </li>
+		    	    <li class="mui-table-view-cell mui-media">
+		    	        <a href="javascript:;">
+		    	            <img class="mui-media-object mui-pull-left" src="img/icon213.png">
+		    	            <div class="mui-media-body">
+		    	                <div class="machine_title">LYC-32G 高固含量油滤油机</div>
+		    	               <div class="mui-ellipsis machine_brand">
+		    	               		品牌：<span style="margin-right: 5px;">利菲尔特</span> 型号： <span>LY-32G</span>
+		    	               </div>
+		    	               <div class="machine_num">
+		    	               		库存： <span>200</span>件
+		    	               </div>
+		    	               <div class="machine_price">
+		    	               		<div>
+		    	               			<span>￥</span>
+		    	               			<span>425.00</span>
+		    	               		</div>		    	          
+		    	               		<div class="gouwuche">
+		    	               			<i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.2rem;"></i>
+		    	               		</div>
+		    	               </div>
+		    	            </div>
+		    	        </a>
+		    	    </li>
+		    	    <li class="mui-table-view-cell mui-media">
+		    	        <a href="javascript:;">
+		    	            <img class="mui-media-object mui-pull-left" src="img/icon213.png">
+		    	            <div class="mui-media-body">
+		    	              <div class="machine_title">LYC-32G 高固含量油滤油机</div>
+		    	               <div class="mui-ellipsis machine_brand">
+		    	               		品牌：<span style="margin-right: 5px;">利菲尔特</span> 型号： <span>LY-32G</span>
+		    	               </div>
+		    	               <div class="machine_num">
+		    	               		库存： <span>200</span>件
+		    	               </div>
+		    	               <div class="machine_price">
+		    	               		<div>
+		    	               			<span>￥</span>
+		    	               			<span>425.00</span>
+		    	               		</div>		    	          
+		    	               		<div class="gouwuche">
+		    	               			<i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.2rem;"></i>
+		    	               		</div>
+		    	               </div>
+		    	            </div>
+		    	        </a>
+		    	    </li>
+		    	    <li class="mui-table-view-cell mui-media">
+		    	        <a href="javascript:;">
+		    	            <img class="mui-media-object mui-pull-left" src="img/icon213.png">
+		    	            <div class="mui-media-body">
+		    	               <div class="machine_title">LYC-32G 高固含量油滤油机</div>
+		    	               <div class="mui-ellipsis machine_brand">
+		    	               		品牌：<span style="margin-right: 5px;">利菲尔特</span> 型号： <span>LY-32G</span>
+		    	               </div>
+		    	               <div class="machine_num">
+		    	               		库存： <span>200</span>件
+		    	               </div>
+		    	               <div class="machine_price">
+		    	               		<div>
+		    	               			<span>￥</span>
+		    	               			<span>425.00</span>
+		    	               		</div>		    	          
+		    	               		<div class="gouwuche">
+		    	               			<i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.2rem;"></i>
+		    	               		</div>
+		    	               </div>
+		    	            </div>
+		    	        </a>
+		    	    </li>
+		    	    <li class="mui-table-view-cell mui-media">
+		    	        <a href="javascript:;">
+		    	            <img class="mui-media-object mui-pull-left" src="img/icon213.png">
+		    	            <div class="mui-media-body">
+		    	                <div class="machine_title">LYC-32G 高固含量油滤油机</div>
+		    	               <div class="mui-ellipsis machine_brand">
+		    	               		品牌：<span style="margin-right: 5px;">利菲尔特</span> 型号： <span>LY-32G</span>
+		    	               </div>
+		    	               <div class="machine_num">
+		    	               		库存： <span>200</span>件
+		    	               </div>
+		    	               <div class="machine_price">
+		    	               		<div>
+		    	               			<span>￥</span>
+		    	               			<span>425.00</span>
+		    	               		</div>		    	          
+		    	               		<div class="gouwuche">
+		    	               			<i class="iconfont icon-gouwuche" style="color: #FFFFFF; font-size: 0.2rem;"></i>
+		    	               		</div>
+		    	               </div>
+		    	            </div>
+		    	        </a>
+		    	    </li>
+		    	</ul>
+		    </div>
+		    
+		</div>
+	</body>
+
+</html>

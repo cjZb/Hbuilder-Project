@@ -1,0 +1,66 @@
+.mui-bar-nav {
+	display: flex;
+	/*height: 1rem;*/
+	background: #0c5bb4;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.topIcon{
+	color: #FFFFFF;
+	font-size: 0.4rem;
+}
+
+.nav-detail {
+	display: flex;
+	justify-content: space-between;
+	width: 2.8rem;
+}
+
+.nav-detail a{
+	color: #FFFFFF !important;
+}
+
+.mui-content {
+	padding: 0 5px;
+}
+
+.goods-details {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+}
+
+.mui-tab-item {
+	width: 16% !important;
+}
+
+.vart {
+	width: 25% !important;
+	color: #FFFFFF !important;
+}
+
+.vart-cart {
+	background: #003e83;
+}
+
+.vart-buy {
+	background: #0c5bb4;
+}
+
+.goods-details a {
+	color: #333333 !important;
+}
+
+.goods-active span{
+	color: #ff0000 !important;
+}
+
+.line {
+	width: 2.72rem;
+	vertical-align: middle;
+	height: 1px;
+	background: #666;
+}
+
+
