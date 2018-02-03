@@ -58,3 +58,45 @@
 .vart-buy {
 	background: #0c5bb4;
 }
+
+.goods-details {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+}
+
+
+.goods-details a {
+	color: #333333 !important;
+}
+
+.goods-active {
+	color: #ff0000 !important;
+}
+
+.line {
+	width: 2.72rem;
+	vertical-align: middle;
+	height: 1px;
+	background: #666;
+}
+
+.eva-title {
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.eva-list {
+	padding: 8px 0;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.eva-list-title {
+	display: flex;
+	justify-content: space-between;
+}
+
+.icolor {
+	color: #FF0000;
+}
