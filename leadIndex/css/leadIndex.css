@@ -1,40 +1,39 @@
 body {
-
+	background: url(../img/guide_bg.png);
 }
 
 .leadIndex {
-	margin-top: 108px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 1200px;
 	height: 600px;
-	position: relative;
 }
 
 .leadIndex div {
 	display: flex;
-	justify-content: center;
+	justify-content: center;	
 	align-items: center;
 }
 
-.guide_logo {
+.leadIndex-font {
 	position: absolute;
-	top: 518px;
-	left: 592px;
+	width: 100%;
+	top: 40px;
+	z-index: 100;
 }
 
-.guide_text2 {
+/*.guide_center {
+	margin: auto;
 	position: absolute;
-	top: 550px;
-	left: 746px;
-}
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}*/
 
-.guide_btn {
-	position: absolute;
-	top: 550px;
-	left: 1316px;
-}
-
-.guide_sccnn {
-	position: absolute;
-	top: 108px;
-	left: 620px;
-}
 
