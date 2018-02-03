@@ -1,0 +1,41 @@
+body {
+	background-image: url(../img/guide_bg.png);
+	background-size: 100% 100%;
+}
+
+.leadIndex {
+	margin-top: 108px;
+	height: 600px;
+	position: relative;
+}
+
+.leadIndex div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.guide_logo {
+	position: absolute;
+	top: 518px;
+	left: 592px;
+}
+
+.guide_text2 {
+	position: absolute;
+	top: 550px;
+	left: 746px;
+}
+
+.guide_btn {
+	position: absolute;
+	top: 550px;
+	left: 1316px;
+}
+
+.guide_sccnn {
+	position: absolute;
+	top: 108px;
+	left: 620px;
+}
+
