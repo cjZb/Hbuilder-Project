@@ -6,7 +6,7 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<script src="js/rem.js"></script>
-		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_560166_vlvueml1q1zia4i.css"/>
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_560166_kukexn83a4z33di.css"/>
 		<link href="css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="css/evaluate.css"/>
 		<script src="js/mui.min.js"></script>
@@ -14,10 +14,109 @@
 		<script type="text/javascript">
 			mui.init()
 		</script>
+		<script>
+			$(function() {
+				$('.eva-list-title i').click(function() {
+					// 改为is不行，why？
+					var col = $(this).hasClass('icolor'); 
+					
+					if (col) {
+						$(this).removeClass('icolor');
+					} else {
+						$(this).addClass('icolor');
+					}
+					
+				});
+			});
+		</script>
 	</head>
 
 	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left topIcon"></a>
+		    <div class="nav-detail">
+		    	 <div class="mui-slider">
+			        <div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+			            <a class="mui-control-item" href="#item1">商品</a>
+			            <a class="mui-control-item" href="#item2">详情</a>
+			            <a class="mui-control-item" href="#item2">评价</a>
+			        </div>
+			        <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+		    	</div>
+		    </div>
+		    <a><i class="iconfont icon-fenxiang topIcon"></i></a>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-active">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <i class="mui-icon iconfont icon-kefu"></i>
+		        <span class="mui-tab-label">客服</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <i class="mui-icon iconfont icon-shoucang"></i>
+		        <span class="mui-tab-label">收藏</span>
+		    </a>
+		    <a class="mui-tab-item vart vart-cart">
+		        <span class="mui-tab-label">加入购物车</span>
+		    </a>
+		    <a class="mui-tab-item vart vart-buy">   
+		        <span class="mui-tab-label">立即购买</span>
+		    </a>
+		</nav>
 		
+		<div class="mui-content">
+		    <div class="eva-title">
+		    	<span>供应弗列加 LF9080机油滤清器  </span>
+		    	<span style="color: #FF0000;">好评度<span>100%</span></span>
+		    </div>
+		    <div>
+		    	<div class="eva-list">
+		    		<div class="eva-list-title">
+			    		<div style="margin-bottom: 5px;">
+			    			<span style="color: #666666;">爱***丝</span>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    		</div>
+			    		<span style="color: #999999;">2018-01-05</span>
+			    	</div>
+			    	<span>质量不错，售后也有保障，有需要还会回购的！</span>
+		    	</div>
+		    	<div class="eva-list">
+		    		<div  class="eva-list-title">
+			    		<div style="margin-bottom: 5px;">
+			    			<span style="color: #666666;">爱***丝</span>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    		</div>
+			    		<span style="color: #999999;">2018-01-05</span>
+			    	</div>
+			    	<span>质量不错，售后也有保障，有需要还会回购的！</span>
+		    	</div>
+		    	<div class="eva-list">
+		    		<div  class="eva-list-title">
+			    		<div style="margin-bottom: 5px;">
+			    			<span style="color: #666666;">爱***丝</span>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    			<i class="iconfont icon-pingjiaxingxing"></i>
+			    		</div>
+			    		<span style="color: #999999;">2018-01-05</span>
+			    	</div>
+			    	<span>质量不错，售后也有保障，有需要还会回购的！</span>
+		    	</div>
+		    </div>
+		</div>
 	</body>
 
 </html>
