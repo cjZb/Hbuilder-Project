@@ -1,5 +1,17 @@
+
+html {
+	height: 100%;
+}
+
 body {
 	background: url(../img/guide_bg.png);
+	height: 100%;
+	overflow: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
 }
 
 .leadIndex {
